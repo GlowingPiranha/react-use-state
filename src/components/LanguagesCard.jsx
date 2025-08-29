@@ -13,7 +13,6 @@ const LanguagesCard = ({ language }) => {
 
   return (
     <div className="d-flex justify-content-center">
-
       <div className="card mt-3 shadow-sm">
         <div className="card-body text-start">
           <h5 className='card-title'>{language.title}</h5>

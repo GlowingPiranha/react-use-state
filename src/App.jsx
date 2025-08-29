@@ -37,31 +37,37 @@ function App() {
     }
   ];
 
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(0);
 
   return (
     <>
       <div className="container my-5">
+        <div className="row">
+          <div className="col-12">
 
 
-        <h1 className="mb-4 fw-bold">Learn Web Development</h1>
+            <h1 className="mb-4 fw-bold">Learn Web Development</h1>
 
-        <div className="d-flex flex-wrap gap-2 mb-4">
+            <div className="d-flex flex-wrap gap-2 mb-4">
 
-          {languages.map((lang, index) => (
-            <LanguagesButton
-              key={index}
-              lang={lang}
-              selected={selected}
-              onSelected={setSelected}
-            />
-          ))}
+              {languages.map((lang, index) => (
+                <LanguagesButton
+                  key={index}
+                  lang={lang}
+                  selected={selected}
+                  onSelected={setSelected}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="col-12">
+
+            <LanguagesCard language={selected} />
+          </div>
         </div>
 
-
-        <LanguagesCard language={selected} />
       </div>
-
     </>
   );
 }
